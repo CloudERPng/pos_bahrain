@@ -13,7 +13,7 @@ import withIdx from './withIdx';
 import withStockQty from './withStockQty';
 import withGetChildItemByIdx from './withGetChildItemByIdx';
 import withExtendedBatchSelector from './withExtendedBatchSelector';
-import withAsyncAddToCart from './withAsyncAddToCart';
+// import withAsyncAddToCart from './withAsyncAddToCart';
 import withCustomItemCart from './withCustomItemCart';
 import withKeyboardShortcuts from './withKeyboardShortcuts';
 import withDiscountValidator from './withDiscountValidator';
@@ -44,7 +44,7 @@ export const extend_pos = flowRight([
   withStockValidator,
   withStockQty,
   withBatchField,
-  withAsyncAddToCart,
+  // withAsyncAddToCart,
   withExtendedBatchSelector,
   withUom,
   withIdx,
