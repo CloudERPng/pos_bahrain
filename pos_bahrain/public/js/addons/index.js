@@ -18,9 +18,9 @@ import withCustomItemCart from './withCustomItemCart';
 import withKeyboardShortcuts from './withKeyboardShortcuts';
 import withDiscountValidator from './withDiscountValidator';
 import withSalesEmployee from './withSalesEmployee';
-// import withMultiCurrency from './withMultiCurrency';
+//import withMultiCurrency from './withMultiCurrency';
 import withSubmittedInvoice from './withSubmittedInvoice';
-// import withModifiedPaymentDialogFields from './withModifiedPaymentDialogFields';
+//import withModifiedPaymentDialogFields from './withModifiedPaymentDialogFields';
 import withExtendedItemPrice from './withExtendedItemPrice';
 // import withReturn from './withReturn';
 import withPaymentReference from './withPaymentReference';
@@ -30,11 +30,11 @@ import withPaymentReference from './withPaymentReference';
 export const extend_pos = flowRight([
   // withReturn,
   withPaymentReference,
-  // withModifiedPaymentDialogFields,
-  // withMultiCurrency,
+  //withModifiedPaymentDialogFields,
+  //withMultiCurrency,
   withSalesEmployee,
   withKeyboardShortcuts,
-  // withMorePaymentActions,
+  //withMorePaymentActions,
   withGetChildItemByIdx,
   withBatchPrice,
   withBarcodeUom,

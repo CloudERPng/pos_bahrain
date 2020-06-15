@@ -27,6 +27,7 @@ export default function withBarcodeUom(Pos) {
         const price_list_rate = this.get_item_price({ item_code, uom });
         Object.assign(item, {
           barcode,
+          uom,
           conversion_factor,
           rate: price_list_rate,
           price_list_rate,
@@ -36,20 +37,9 @@ export default function withBarcodeUom(Pos) {
       }
     }
     async add_to_cart() {
-      if (this.use_barcode_uom && this.barcode) {
-        const { uom } = this.barcode;
-        this.items[0].uom = uom;
-      }
       const item = await super.add_to_cart();
       this._apply_barcode_uom(item);
       return item;
-    }
-    add_new_item_to_grid() {
-      super.add_new_item_to_grid();
-      if (this.use_barcode_uom && this.barcode) {
-        const { uom } = this.barcode;
-        this.child.uom = uom;
-      }
     }
   };
 }

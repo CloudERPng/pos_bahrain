@@ -1,11 +1,11 @@
 from frappe import _
-from toolz import merge
 
 
-def make_column(key, label=None, type="Data", width=120, **kwargs):
-    return merge({
+def make_column(key, label=None, type="Data", options=None, width=120):
+    return {
         "label": _(label or key.replace("_", " ").title()),
         "fieldname": key,
         "fieldtype": type,
+        "options": options,
         "width": width,
-    }, kwargs)
+    }
